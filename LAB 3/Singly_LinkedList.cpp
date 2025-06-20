@@ -14,7 +14,7 @@ struct Node {
     string name;
     Node* next_pointer; // Pointer to the next Node
 
-    // Constructor to initialize Node
+    //initialize Node
     Node(string n) : name(n), next_pointer(nullptr) {}
 };
 
@@ -22,7 +22,7 @@ class Linkedlist {
     Node* head; // Pointer to the head of the list
 
 public:
-    Linkedlist() : head(nullptr) {} // Constructor to initialize head
+    Linkedlist() : head(nullptr) {} //initialize head
 
     void insert_node(Node* node) {
         if (head == nullptr) {
@@ -39,13 +39,10 @@ public:
     void display_list() {
         Node* currNode = head;
         while (currNode != nullptr) {
-            cout << currNode->name << " "; // Print the name of the current node
+            cout << currNode->name << " -> "; // Print the name of the current node
             currNode = currNode->next_pointer; // Move to the next node
         }
-        cout << endl; // New line after displaying the list
     }
-
-    // You can implement delete_node if needed
 };
 
 int main() {
