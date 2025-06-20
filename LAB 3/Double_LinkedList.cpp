@@ -15,7 +15,7 @@ struct Node {
     Node* next_pointer; // Pointer to the next Node
     Node* prev_pointer; // Pointer to the previous Node
 
-    // Constructor to initialize Node
+    //initialize Node
     Node(string n) : name(n), next_pointer(nullptr), prev_pointer(nullptr) {}
 };
 
@@ -24,7 +24,7 @@ class Linkedlist {
     Node* tail; // Pointer to the tail of the list
 
 public:
-    Linkedlist() : head(nullptr), tail(nullptr) {} // Constructor to initialize head
+    Linkedlist() : head(nullptr), tail(nullptr) {} //initialize head
 
     void insert_node(Node* node) {
         if (head == nullptr) {
