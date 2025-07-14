@@ -9,6 +9,7 @@ lab: L5
 #include <string>
 using namespace std;
 
+// Node class for each stack element
 class Node {
 public:
     string data;
@@ -16,11 +17,13 @@ public:
     Node(string val) : data(val), next(nullptr) {}
 };
 
+// Stack class using linked list
 class Stack {
 public:
     Node* top;
     Stack() : top(nullptr) {}
-    
+
+    // Pushes a new element onto the stack
     void push(string value) {
         Node* newNode = new Node(value);
         newNode->next = top;
@@ -28,6 +31,7 @@ public:
         cout << "Pushed: " << value << endl;
     }
 
+    // Displays all elements in the stack
     void display() {
         Node* current = top;
         if (current == nullptr) {
@@ -43,6 +47,7 @@ public:
         
     }
 
+    // Removes the top element from the stack
     void pop() {
         if (top == nullptr) {
             cout << "Stack underflow" << endl;
@@ -54,6 +59,7 @@ public:
         delete temp; 
     }
 
+   // Returns the value at the top of the stack
     string peek() {
         if (top == nullptr) {
             return "empty stack";
@@ -61,6 +67,7 @@ public:
         return top->data;
     }
 
+    // Checks if the stack is empty
     bool isEmpty() {
         return top == nullptr;
     }
@@ -82,7 +89,7 @@ int main() {
     s.pop();
     s.pop();
     s.display(); 
-    s.pop(); 
+    s.pop(); // Attempt to pop from an empty stack
 
     return 0;
 }
