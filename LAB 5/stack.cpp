@@ -69,9 +69,9 @@ public:
 int main() {
     Stack s;
 
-    s.push("Ahmad");
-    s.push("Syed");
-    s.push("Aliya");
+    s.push("Aiman");
+    s.push("Alisha");
+    s.push("Husin");
 
     s.display();
 
