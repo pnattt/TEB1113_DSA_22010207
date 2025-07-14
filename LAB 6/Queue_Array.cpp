@@ -2,7 +2,7 @@
 id: 22010207
 name: puteri natasha
 group: g3
-lab: L5
+lab: L6
 */
 
 #include <iostream>
